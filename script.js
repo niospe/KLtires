@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Configuración de partículas
     const particles = [];
-    const maxParticles = 5000;
+    const maxParticles = 1000;
     const colors = ['#5c3a21', '#4a2e17', '#3a2516'];
 
     // Clase Particle (sin cambios)
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Delay de 1 segundo (1000ms) antes de iniciar
     setTimeout(() => {
         createParticles(); // Comienza después de 1 segundo
-    }, 1500);
+    }, 2000);
 
     // Redimensionar canvas (sin cambios)
     window.addEventListener('resize', () => {
