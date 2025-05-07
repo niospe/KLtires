@@ -112,20 +112,20 @@ body, html {
     justify-content: center;
 }
 
-.cotizacionBtn, .logoKl {
+.cotizacionBtn, .logoKl, .redes{
 
     animation: fallSequence 0.5s ease-out forwards;
     transform: translateX(-100px);
     opacity: 0;
 }
-.content {
+.content, {
 
     animation: fallSequence 0.5s ease-out forwards;
     transform: translateX(100px);
     opacity: 0;
 }
 
-.cotizacionBtn { animation-delay: .5s; }
+.cotizacionBtn, .redes{ animation-delay: .5s; }
 
 
 @keyframes fallSequence {
