@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Configuración de partículas
     const particles = [];
-    const maxParticles = 1000;
+    const maxParticles = 300;
     const colors = ['#5c3a21', '#4a2e17', '#3a2516'];
 
     // Clase Particle (sin cambios)

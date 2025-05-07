@@ -26,14 +26,14 @@ body, html {
 .logoKl {
     display: flex;
     justify-self: center;
-    
+    width: 300px;
+    height: auto;
 }
 
 .logoKl img{
     z-index: 3;
     width: 300px;
     height: auto;
-    padding: 50px;
 }
 /* Canvas de partículas */
 #mudCanvas {
@@ -52,7 +52,7 @@ body, html {
     z-index: 2; /* Capa superior */
     color: white;
     text-align: center;
-    padding-top: 2vh; /* Ajuste vertical */
+    padding-top: 0px; /* Ajuste vertical */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     max-width: 600px;
     justify-self: center;
