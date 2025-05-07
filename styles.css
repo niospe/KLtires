@@ -54,6 +54,8 @@ body, html {
     text-align: center;
     padding-top: 20vh; /* Ajuste vertical */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    max-width: 600px;
+    justify-self: center;
 }
 
 .content h1 {
