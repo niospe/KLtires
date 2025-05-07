@@ -99,6 +99,19 @@ body, html {
     font-family: Verdana, Geneva;
 }
 
+.redes {
+    margin-top: 30px;
+}
+.bi-instagram {
+    
+    color: white;
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcaf45);
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    justify-content: center;
+}
+
 .cotizacionBtn, .logoKl {
 
     animation: fallSequence 0.5s ease-out forwards;
