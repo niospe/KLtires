@@ -28,13 +28,18 @@ body, html {
     justify-self: center;
     width: 300px;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 4;
 }
 
 .logoKl img{
-    z-index: 3;
+    z-index: 5;
     width: 300px;
     height: auto;
 }
+
+
 /* Canvas de partículas */
 #mudCanvas {
     position: fixed;
@@ -92,4 +97,27 @@ body, html {
     text-decoration: none;
     color: white;
     font-family: Verdana, Geneva;
+}
+
+.cotizacionBtn, .logoKl {
+
+    animation: fallSequence 0.5s ease-out forwards;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+.content {
+
+    animation: fallSequence 0.5s ease-out forwards;
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.cotizacionBtn { animation-delay: .5s; }
+
+
+@keyframes fallSequence {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

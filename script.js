@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Configuración de partículas
     const particles = [];
-    const maxParticles = 300;
+    const maxParticles = 150;
     const colors = ['#5c3a21', '#4a2e17', '#3a2516'];
 
     // Clase Particle (sin cambios)
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
             this.size = Math.random() * 60 + 40;
-            this.opacity = Math.random() * 0.6 + 0.4;
+            this.opacity = Math.random() * 0.3 + 0.05;
             this.rotation = Math.random() * 360;
             this.image = new Image();
             this.image.src = 'mancha.png';
