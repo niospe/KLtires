@@ -1,0 +1,93 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Video de fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Capa inferior */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre todo el espacio sin deformarse */
+}
+
+.logoKl {
+    display: flex;
+    justify-self: center;
+    
+}
+
+.logoKl img{
+    z-index: 3;
+    width: 300px;
+    height: auto;
+    padding: 50px;
+}
+/* Canvas de partículas */
+#mudCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Encima del video, debajo del contenido */
+    pointer-events: none; /* Permite interactuar con el contenido */
+}
+
+/* Contenido superpuesto */
+.content {
+    position: relative;
+    z-index: 2; /* Capa superior */
+    color: white;
+    text-align: center;
+    padding-top: 20vh; /* Ajuste vertical */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.content button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.content button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.cotizacionBtn {
+    background-color: #11b95a;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 200px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.cotizacionBtn a {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva;
+}
