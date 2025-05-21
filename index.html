@@ -12,8 +12,9 @@
 <body>
     <!-- Video de fondo -->
     <div class="video-background">
-        <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto">
-        <source src="video.mp4" type="video/mp4"> </video>
+         <video id="hero-video" loop muted playsinline webkit-playsinline>
+            <source src="video.mp4" type="video/mp4">
+    </video>
     </div>
 
     <!-- Contenido principal -->
@@ -103,6 +104,47 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('hero-video');
+    
+    // Configuración esencial
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    
+    // Estrategia de reproducción escalonada
+    const playAttempt = setInterval(() => {
+        video.play()
+            .then(() => {
+                clearInterval(playAttempt);
+            })
+            .catch(error => {
+                console.log('Intento de reproducción fallido, reintentando...');
+            });
+    }, 1000);
+    
+    // Disparadores alternativos
+    window.addEventListener('scroll', () => {
+        video.play().catch(e => console.log('Scroll trigger failed'));
+    }, { passive: true });
+    
+    window.addEventListener('touchstart', () => {
+        video.play().catch(e => console.log('Touch trigger failed'));
+    }, { passive: true });
+    
+    // Fallback para iOS persistente
+    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                video.play().catch(e => console.log('iOS fallback failed'));
+            }
+        }, { threshold: 0.5 });
+        
+        observer.observe(video);
+    }
+});
+    </script>
 </body>
 </html>
